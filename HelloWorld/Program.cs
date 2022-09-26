@@ -96,19 +96,25 @@ foreach (string i in list2)
 }
 
 //METHODS AND CLASSES
-class program
+class program: notProgram //Inheritance
 {
     public static void Main(string[] args)
     {
-       
+
         int myAge = 16;
         gettingOlder(myAge);
         Console.WriteLine($"My Age is {myAge}");
     }
-    public static int gettingOlder(int age)
+}
+class notProgram { 
+    protected static int gettingOlder(int age) //protected is not the same as in Java - need to use inheritance in main class
     {
         age++;
         //Console.WriteLine(age.ToString());
         return age;
     }
-}
+  }
+
+//CREATING OBJECTS
+//need to create a psvm on another winow and call the class and create an obejct
+//need to create a class by right-clicking on the right hand side on helloworld to create a class
